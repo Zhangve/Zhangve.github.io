@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>   
+</head>
+<body>
+<h1>您由什么组成</br></h1>
+<span>输入姓名:</span>
+<form>
+    <input id="id1" type="text" name="name1" />
+</form>
+<button onclick="test()">确认</button>
+<div id="html"></div>
+<script>
+    function test(){
+        var x=document.getElementById("id1");
+    var y=document.getElementById("html");
+        var ku=['烟花','银河','美梦的最后一分钟','一辈子的承诺','期盼','小狗','小猫','海边日出','玫瑰','绵羊','飞行员',
+        '小狐狸','B612','四十三次日落','无人行星','爱情','自己选择的亲人','蝴蝶','暖阳','海鸟','浪花','旅途','星星',
+        '掌灯人','冒险家','花卉','满天星','玫瑰花园','两片完全相同的雪花','独一无二','驯服','陪伴','责任','绿洲','黎明',
+        '泉水','跳动的火光','篝火','烟花','沙漠的星星','盛夏的蝉鸣','彩色糖纸','荧光水母','蓝色海洋','浪花的白沫','清晨',
+        '棉花','热闹的小巷子','闪着光的棱镜','探索浪漫宇宙的使者','初春的音符','晚星','晨光','满分的试卷','健康','平安',
+        '拥有玫瑰的王子','有人陪伴的平凡','平淡中的浪漫','圣诞老人帽檐上的雪','温暖的壁炉','火焰','雪夜','霓虹灯','星星灯',
+        '月光曲','山涧','北极熊','小企鹅','宇航员','拥有花园的蝴蝶','歌颂者','雨水','蝉想'];
+        var a=Math.floor(Math.random() * 73);
+        var b=Math.floor(Math.random() * 73);
+        while(a==b)
+        {
+            a=Math.floor(Math.random() * 73);
+            b=Math.floor(Math.random() * 73);
+        }
+        y.innerHTML=x.value+"由"+ku[a]+"与"+ku[b]+"组成";
+    }
+</script>
+</body>
+</html>
