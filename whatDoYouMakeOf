@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>   
+<head>
+    <style>
+        body{background-image: url(web背景.jpg);
+        }
+        .class1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 30%;
+            width: 50%;
+            margin: -15% 0 0 -25%;
+        }
+    </style>
+    
 </head>
 <body>
-<h1>您由什么组成</br></h1>
-<span>输入姓名:</span>
-<form>
-    <input id="id1" type="text" name="name1" />
-</form>
-<button onclick="test()">确认</button>
-<div id="html"></div>
+<div class="class1" align="center">
+    <h1>您由什么组成</br></h1>
+    <span>输入姓名:</span>
+    <form>
+        <input id="id1" type="text" name="name1" />
+    </form>
+    <button onclick="test()">确认</button>
+    <h2 id="html"></h2>
+</div>
 <script>
     function test(){
         var x=document.getElementById("id1");
@@ -23,12 +38,14 @@
         '月光曲','山涧','北极熊','小企鹅','宇航员','拥有花园的蝴蝶','歌颂者','雨水','蝉想'];
         var a=Math.floor(Math.random() * 73);
         var b=Math.floor(Math.random() * 73);
-        while(a==b)
+        var c=Math.floor(Math.random() * 73);
+        while(a==b||a==c||b==c)
         {
             a=Math.floor(Math.random() * 73);
             b=Math.floor(Math.random() * 73);
+            c=Math.floor(Math.random() * 73);
         }
-        y.innerHTML=x.value+"由"+ku[a]+"与"+ku[b]+"组成";
+        y.innerHTML=x.value+"由"+ku[a]+"、"+ku[b]+"和"+ku[c]+"组成";
     }
 </script>
 </body>
